@@ -1,0 +1,99 @@
+/* ==========================
+   ADMIN PANEL STYLING
+   ========================== */
+
+/* General look */
+body {
+  background: #f5f8ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #0d6efd !important;
+}
+
+/* Card design */
+.card {
+  border-radius: 1.2rem !important;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+/* Table */
+.table {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background: linear-gradient(to right, #7ec8f1, #b3e0ff);
+  color: #003366;
+}
+
+/* Footer */
+footer {
+  background: #001b3d;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+/* Modal design */
+.modal-content {
+  border-radius: 1rem !important;
+  border: none;
+}
+
+/* Inputs & forms */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: #0d6efd;
+}
+
+/* Stat cards */
+.stat-card {
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: scale(1.03);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.stat-title {
+  font-size: 0.95rem;
+  color: #666;
+}

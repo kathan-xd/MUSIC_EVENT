@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | CampusEvents</title>
+
+  <!-- ✅ Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- ✅ AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- ✅ Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/client.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="../index.html">CampusEvents</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="my-registrations.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="hero-section text-white text-center"
+    style="
+      background: linear-gradient(to right, rgba(74, 144, 226, 0.7), rgba(100, 181, 246, 0.6)),
+                  url('../assets/images/about-bg.jpg') center/cover no-repeat;
+    "
+  >
+    <div class="container py-5" data-aos="fade-up">
+      <h1 class="fw-bold display-5">About CampusEvents</h1>
+      <p class="lead">Bringing together the passion, talent, and creativity of students 🎶</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+          <img src="../assets/images/music-stages.jpg" class="img-fluid rounded-4 shadow-lg hover-zoom" alt="Music Event">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="fw-bold text-primary mb-3">Who We Are</h2>
+          <p class="text-muted">
+            <strong>CampusEvents</strong> is a student-driven platform at Marwadi University designed to organize and promote musical events that let you showcase your artistic side.
+            Whether you play the guitar, drums, or keyboard, this is the stage to shine and connect with others who share your rhythm.
+          </p>
+          <p class="text-muted">
+            Our mission is to foster creativity and community by hosting events that celebrate diversity in talent and performance.
+            Every note played here echoes the spirit of our campus — energetic, expressive, and extraordinary.
+          </p>
+          <a href="events.html" class="btn btn-primary fw-semibold mt-3 px-4 py-2">Explore Events</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold text-primary mb-5" data-aos="fade-up">Our Vision & Mission</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="p-4 bg-white rounded-4 shadow-sm hover-zoom h-100">
+            <h4 class="fw-semibold mb-2 text-secondary">🎯 Vision</h4>
+            <p class="text-muted">
+              To build a vibrant campus culture that values creativity, collaboration, and musical excellence — inspiring every student to perform with confidence and joy.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="p-4 bg-white rounded-4 shadow-sm hover-zoom h-100">
+            <h4 class="fw-semibold mb-2 text-secondary">🚀 Mission</h4>
+            <p class="text-muted">
+              To provide students with opportunities to learn, perform, and grow through well-organized, inclusive events that celebrate the power of music and teamwork.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Section -->
+  <section
+    class="text-white text-center py-5"
+    style="background: linear-gradient(90deg, #64b5f6, #1976d2);"
+  >
+    <div class="container" data-aos="zoom-in">
+      <h2 class="fw-bold mb-3">Join the Rhythm of the Campus!</h2>
+      <p class="mb-4">Have questions or want to collaborate? Reach out to us anytime.</p>
+      <a href="contact.html" class="btn btn-light fw-semibold px-4 py-2 hover-zoom">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>© 2025 CampusEvents. Built with passion for music and creativity 🎵</p>
+  </footer>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  </script>
+</body>
+</html>

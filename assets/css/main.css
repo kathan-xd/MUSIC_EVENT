@@ -1,0 +1,107 @@
+/* ==============================
+   main.css
+   Global Styles for CampusEvents
+   ============================== */
+
+/* 🌈 Color Palette */
+:root {
+  --primary-color: #4a90e2; /* Soft Blue */
+  --secondary-color: #f4f8fb;
+  --text-color: #333;
+  --light-text: #777;
+  --white: #fff;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+/* Section Headings */
+section h2 {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #337acc;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Form */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  border-color: var(--primary-color);
+}
+
+label {
+  color: var(--text-color);
+}
+
+/* Responsive Text Alignment */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}

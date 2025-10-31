@@ -1,0 +1,77 @@
+/* HERO SECTION IMPROVED */
+.hero {
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(74, 144, 226, 0.8), rgba(100, 181, 246, 0.6)),
+              url('../images/event1.jpg') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero .highlight {
+  color: #ffeb3b;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero .btn-light {
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.hero .btn-light:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero {
+    height: 70vh;
+  }
+}

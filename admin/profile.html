@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | CampusEvents Admin</title>
+  
+  <!-- Bootstrap & AOS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/client.css" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8fafc;
+    }
+    .card {
+      border-radius: 15px;
+    }
+    footer {
+      margin-top: auto;
+      background: linear-gradient(90deg, #0d6efd, #007bff);
+      color: white;
+    }
+    footer p {
+      margin: 0;
+    }
+    .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056d2;
+    }
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="admin-dashboard.html">CampusEvents Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="admin-dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="manage-events.html">Manage Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="participants.html">Participants</a></li>
+          <li class="nav-item"><a class="nav-link" href="messages.html">Messages</a></li>
+          <li class="nav-item"><a class="nav-link active fw-semibold text-primary" href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="container py-5" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card border-0 shadow p-4">
+          <div class="text-center mb-4">
+            <img src="../assets/images/admin.jpeg" alt="Admin" class="rounded-circle mb-3" width="100" height="100" />
+            <h4 class="fw-bold text-primary">Admin Profile</h4>
+            <p class="text-muted mb-0">CampusEvents Manager</p>
+          </div>
+
+          <form id="profileForm">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="adminName" placeholder="Kathan Pandya" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Email</label>
+              <input type="email" class="form-control" id="adminEmail" value="kathan@marwadiuniversity.ac.in" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Password</label>
+              <input type="password" class="form-control" id="adminPassword" placeholder="Enter your password" required />
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <button type="submit" class="btn btn-primary fw-semibold">Save Changes</button>
+              <button type="button" class="btn btn-link text-danger fw-semibold" data-bs-toggle="modal" data-bs-target="#forgotModal">Forgot Password?</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold text-primary" id="forgotModalLabel">Reset Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="resetForm">
+            <div id="step1">
+              <label class="form-label fw-semibold">Enter Registered Email</label>
+              <input type="email" id="resetEmail" class="form-control mb-3" placeholder="example@domain.com" required />
+              <button type="button" class="btn btn-primary w-100 fw-semibold" id="sendOtpBtn">Send OTP</button>
+            </div>
+
+            <div id="step2" class="d-none">
+              <label class="form-label fw-semibold">Enter OTP</label>
+              <input type="text" id="otpInput" class="form-control mb-3" placeholder="Enter 4-digit OTP" required />
+              <button type="button" class="btn btn-success w-100 fw-semibold" id="verifyOtpBtn">Verify OTP</button>
+            </div>
+
+            <div id="step3" class="d-none">
+              <label class="form-label fw-semibold">New Password</label>
+              <input type="password" id="newPass" class="form-control mb-3" placeholder="Enter new password" required />
+              <label class="form-label fw-semibold">Confirm Password</label>
+              <input type="password" id="confirmPass" class="form-control mb-3" placeholder="Confirm password" required />
+              <button type="submit" class="btn btn-primary w-100 fw-semibold">Reset Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 mt-auto">
+    <p>&copy; 2025 CampusEvents Admin Panel</p>
+  </footer>
+
+  <!-- Bootstrap + AOS + JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+
+  <!-- JS Logic -->
+  <script>
+    let generatedOtp = "";
+
+    document.getElementById("sendOtpBtn").addEventListener("click", () => {
+      const email = document.getElementById("resetEmail").value.trim();
+      if (email === "" || !email.includes("@")) {
+        alert("Please enter a valid email.");
+        return;
+      }
+      generatedOtp = Math.floor(1000 + Math.random() * 9000).toString();
+      alert("OTP sent to " + email + " ✅ (For demo, OTP is: " + generatedOtp + ")");
+      document.getElementById("step1").classList.add("d-none");
+      document.getElementById("step2").classList.remove("d-none");
+    });
+
+    document.getElementById("verifyOtpBtn").addEventListener("click", () => {
+      const otpInput = document.getElementById("otpInput").value.trim();
+      if (otpInput === generatedOtp) {
+        alert("OTP verified successfully ✅");
+        document.getElementById("step2").classList.add("d-none");
+        document.getElementById("step3").classList.remove("d-none");
+      } else {
+        alert("Incorrect OTP ❌");
+      }
+    });
+
+    document.getElementById("resetForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const newPass = document.getElementById("newPass").value.trim();
+      const confirmPass = document.getElementById("confirmPass").value.trim();
+      if (newPass.length < 6) {
+        alert("Password must be at least 6 characters long.");
+      } else if (newPass !== confirmPass) {
+        alert("Passwords do not match ❌");
+      } else {
+        alert("Password reset successfully ✅");
+        location.reload();
+      }
+    });
+  </script>
+</body>
+</html>

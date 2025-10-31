@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participants | Admin - CampusEvents</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/admin.css">
+
+  <style>
+    /* ✅ Keep footer at the bottom */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f9fafb;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #0d1b2a;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="admin-dashboard.html">CampusEvents Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="admin-dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="manage-events.html">Manage Events</a></li>
+          <li class="nav-item"><a class="nav-link active" href="participants.html">Participants</a></li>
+          <li class="nav-item"><a class="nav-link" href="messages.html">Messages</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- Header -->
+    <section class="py-5 text-center bg-white shadow-sm mb-4">
+      <h1 class="fw-bold text-primary">Participants Overview</h1>
+      <p class="text-muted">View and manage event participants</p>
+    </section>
+
+    <!-- Stats Cards -->
+    <div class="container mb-5">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="bi bi-people text-primary fs-1 mb-2"></i>
+            <h6>Total Participants</h6>
+            <h4 class="fw-bold text-primary">320</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="bi bi-music-note-beamed text-success fs-1 mb-2"></i>
+            <h6>Instrumental Event</h6>
+            <h4 class="fw-bold text-success">120</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm text-center p-4">
+            <i class="bi bi-trophy text-warning fs-1 mb-2"></i>
+            <h6>Winners Announced</h6>
+            <h4 class="fw-bold text-warning">12</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Participants Table -->
+    <div class="container mb-5">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white fw-bold">
+          Registered Participants
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Event</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kathan Pandya</td>
+                <td>kathan@marwadiuniversity.ac.in</td>
+                <td>Keyboard</td>
+                <td><span class="badge bg-success">Confirmed</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Riya Shah</td>
+                <td>riya@marwadiuniversity.ac.in</td>
+                <td>Guitar</td>
+                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-success"><i class="bi bi-check2"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">&copy; 2025 CampusEvents | Admin Panel</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

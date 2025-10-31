@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | CampusEvents Admin</title>
+
+  <!-- Bootstrap & AOS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/client.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+
+  <!-- ✅ Footer fix -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    body > section {
+      flex: 1;
+    }
+    footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="admin-dashboard.html">CampusEvents Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="admin-dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="manage-events.html">Manage Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="participants.html">Participants</a></li>
+          <li class="nav-item"><a class="nav-link" href="messages.html">Messages</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section class="container py-5">
+    <h2 class="fw-bold text-primary mb-4" data-aos="fade-down">Admin Dashboard</h2>
+
+    <!-- Stat Cards Row -->
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="stat-card text-center">
+          <div class="stat-icon mb-2"><i class="bi bi-calendar-event"></i></div>
+          <div class="stat-value">3</div>
+          <div class="stat-title">Total Events</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-card text-center">
+          <div class="stat-icon mb-2"><i class="bi bi-people"></i></div>
+          <div class="stat-value">58</div>
+          <div class="stat-title">Total Participants</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-card text-center">
+          <div class="stat-icon mb-2"><i class="bi bi-envelope"></i></div>
+          <div class="stat-value">12</div>
+          <div class="stat-title">New Messages</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Registrations -->
+    <div class="mt-5" data-aos="fade-up">
+      <h4 class="fw-semibold text-secondary mb-3">Recent Registrations</h4>
+      <div class="table-responsive shadow-sm">
+        <table class="table table-striped table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>#</th>
+              <th>Participant Name</th>
+              <th>Event</th>
+              <th>Email</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>Riya Patel</td><td>Guitar Jam</td><td>riya@mu.edu</td><td>2025-10-30</td>
+            </tr>
+            <tr>
+              <td>2</td><td>Arjun Mehta</td><td>Drum Battle</td><td>arjun@mu.edu</td><td>2025-10-29</td>
+            </tr>
+            <tr>
+              <td>3</td><td>Kavya Shah</td><td>Keyboard Performance</td><td>kavya@mu.edu</td><td>2025-10-28</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>© 2025 CampusEvents Admin Panel</p>
+  </footer>
+
+  <!-- Bootstrap + AOS + Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.js"></script>
+  <script>AOS.init({ duration: 900, once: true });</script>
+
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>
